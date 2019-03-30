@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Test it out
 
-* Ruby version
+Launch the app
 
-* System dependencies
+[demomyappl](https://demomyappl.herokuapp.com/urls.json)
 
-* Configuration
 
-* Database creation
+Create a new index from Url
 
-* Database initialization
+Eg:- h1 h2 ...  content from https://github.com
+```bash
+curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"urls", "attributes":{"url":"https://github.com"}}}' https://demomyappl.herokuapp.com/urls
+```
 
-* How to run the test suite
+You can now query all one of your content
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+curl -i -H "Accept: application/vnd.api+json" "https://demomyappl.herokuapp.com/urls"
+```
 
-* Deployment instructions
 
-* ...
