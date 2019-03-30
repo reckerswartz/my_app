@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
   include JSONAPI::ActsAsResourceController
-  include ActionController::RequestForgeryProtection
-  include ActionController::Flash
 
-
-  protect_from_forgery unless: -> { request.format.json? }
+  protect_from_forgery with: :null_session
 end
