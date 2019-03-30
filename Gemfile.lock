@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/rubocop-hq/rubocop.git
+  revision: d28f8607a5165800000a11c299f5878deaebb19c
+  specs:
+    rubocop (0.66.0)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      psych (>= 3.1.0)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -97,7 +110,7 @@ GEM
     parser (2.6.2.0)
       ast (~> 2.4.0)
     pg (1.1.4)
-    powerpack (0.1.2)
+    psych (3.1.0)
     puma (3.12.1)
     rack (2.0.6)
     rack-test (1.1.0)
@@ -133,14 +146,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rubocop (0.60.0)
-      jaro_winkler (~> 1.5.1)
-      parallel (~> 1.10)
-      parser (>= 2.5, != 2.5.1.1)
-      powerpack (~> 0.1)
-      rainbow (>= 2.2.2, < 4.0)
-      ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     spring (2.0.2)
@@ -159,7 +164,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    unicode-display_width (1.4.1)
+    unicode-display_width (1.5.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -173,10 +178,11 @@ DEPENDENCIES
   byebug
   jsonapi-resources (~> 0.9.6)
   listen (>= 3.0.5, < 3.2)
+  nokogiri (~> 1.10, >= 1.10.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.0.beta3)
-  rubocop (~> 0.60.0)
+  rubocop!
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -27,7 +29,7 @@ gem 'bootsnap', '>= 1.4.1', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -36,11 +38,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Automatic Ruby code style checking tool
-  gem 'rubocop', '~> 0.60.0', require: false
+  gem 'rubocop', github: 'rubocop-hq/rubocop', require: false
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # resource-centric approach to implementing the controllers, routes, and serializers needed to support the JSON API spec
 gem 'jsonapi-resources', '~> 0.9.6'
+# HTML, XML, SAX, and Reader parser
+gem 'nokogiri', '~> 1.10', '>= 1.10.2'
