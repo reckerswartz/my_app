@@ -1,5 +1,5 @@
 class TagResource < JSONAPI::Resource
   attributes :tag
-  has_many :content
+  has_many :contents
   has_one :url
 end
